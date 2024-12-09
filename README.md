@@ -22,7 +22,7 @@ To begin development in a containerized environment:
 
 
 2. **Open in Visual Studio Code:**
-   Open your new repository in VSCode. The easiest way is to go to the git tab in VSCode and select `Clone Repository` and then copy the URL to the repository into the dialog that opens, e.g. `https://github.com/marc-hanheide/my-cmp3103-ws` in the example case. The choose the local folder you want to repository to be checked out into and choose to open the new workspace.
+   Open your new repository in VSCode. The easiest way is to go to the git tab in VSCode and select `Clone Repository` and then copy the URL to the repository into the dialog that opens, e.g. `https://github.com/marc-hanheide/my-cmp3103-ws` in the example case. Then, choose the local folder you want to repository to be checked out into and choose to open the new workspace.
 
    <img width="577" alt="image" src="https://github.com/user-attachments/assets/71c78415-4461-464a-8b65-3ec046108846">
 
