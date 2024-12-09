@@ -30,8 +30,6 @@ To begin development in a containerized environment:
 
    <img width="451" alt="image" src="https://github.com/user-attachments/assets/6f4d2df4-bcb5-4887-8009-427aab59037c">
 
-   **NOTE:** You can also open in *GitHub Codespaces* (which is an full development environment in the cloud, but it can incur costs, see https://github.com/features/codespaces for further information. 
-
 3. **Container Setup:**
    Once reopened in the container, VSCode will initiate the building process and pull all necessary dependencies. You can monitor the building log within VSCode. This may take a while (in particular if you have not previouly used the computer with the container), as you entire image with all installations is being pulled.
    
