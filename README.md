@@ -80,5 +80,5 @@ You can now use the VSCode terminal to launch all the commands you need and run 
 
 ### References
 
-1. [cmp3103-ws]https://github.com/UoL-SoCS/cmp3103-ws)
+1. [cmp3103-ws](https://github.com/UoL-SoCS/cmp3103-ws)
 2. [Get Started with Dev Containers in VS Code](https://youtu.be/b1RavPr_878?si=ADepc_VocOHTXP55)
