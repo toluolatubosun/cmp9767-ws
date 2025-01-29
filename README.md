@@ -10,9 +10,9 @@ To begin development in a containerized environment:
    The best way to work with this repo is to use it as a template for your ROS package development, to do so, in the top right corner select `Use this template` and then `Create new repository`:
    <img width="715" alt="image" src="https://github.com/user-attachments/assets/1d60f491-5e35-4bed-be62-3d35aba7e6b7">
 
-   Alternatively, you may choose to "Fork" the repository ([read here about the differences](https://docs.github.com/en/enterprise-server@2.22/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template))
+   Alternatively, you may choose to "Fork" the repository ([read here about the differences](https://docs.github.com/en/enterprise-server@2.22/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)). However, if you create a "fork" your repository will be public, which you may want to avoid for assessed work.
 
-   Then, in the next step specify the owner and the repository name you want to create as shown below (You are recommended to make this a _private_ repository until the marking of the assessment is complete):
+   Then, in the next step specify the owner (yourself) and the repository name (e.g. `cmp3103`) you want to create as shown below (You are recommended to make this a _private_ repository until the marking of the assessment is complete):
 
    <img width="735" alt="image" src="https://github.com/user-attachments/assets/8b48fb41-d389-432b-80c4-9f623bc3f793">
 
