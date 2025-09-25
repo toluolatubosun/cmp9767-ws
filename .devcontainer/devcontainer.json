@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
 	"name": "L-CAS Humble CUDA-OpenGL Teaching Devcontainer",
-	"image": "lcas.lincoln.ac.uk/devcontainer/ros2-teaching:4",
+	"image": "lcas.lincoln.ac.uk/lcas/cmp9767:1.0",
 
 	"forwardPorts": [5801],
 	"portsAttributes": {
