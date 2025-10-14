@@ -18,7 +18,7 @@ class MinimalPublisher(Node):
         self.side_count = 0  # tracks which side of square (0-3)
         self.state_timer = 0  # tracks time in current state
         self.forward_duration = 30  # ~3 seconds forward (30 * 0.1s)
-        self.turn_duration = 16   # ~1.6 seconds for 90-degree turn (16 * 0.1s)
+        self.turn_duration = 15   # ~1.5 seconds for 90-degree turn (15 * 0.1s)
 
     def timer_callback(self):
         msg = Twist()
@@ -38,8 +38,8 @@ class MinimalPublisher(Node):
         elif self.state == 'turning':
             # Turn 90 degrees left to form square corners
             msg.linear.x = 0.0  # No forward movement
-            msg.linear.y = 0.0  # No sideways movement  
-            msg.angular.z = 1.0  # 90 degrees over ~1.6 seconds
+            msg.linear.y = 0.0  # No sideways movement
+            msg.angular.z = 1.0  # 90 degrees over ~1.5 seconds
             self.state_timer += 1
             
             if self.state_timer >= self.turn_duration:
