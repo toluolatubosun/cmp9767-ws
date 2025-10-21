@@ -25,3 +25,20 @@ ros2 run tf2_ros tf2_echo odom depth_camera_link
 
 # Get the frame the laser scanner is in
 ros2 topic echo /scan
+
+# ROS2 Package
+For `my_robot_package` you can use any name
+
+```bash
+# Create a package
+ros2 pkg create --build-type ament_python my_robot_package --dependencies rclpy geometry_msgs sensor_msgs tf2_ros tf2_geometry_msgs
+
+# Build workspace
+colcon build --symlink-install
+
+# Set enviroment so ros2 can find new packages
+source install/setup.bash
+
+# Run the package
+ros2 run my_robot_package move_circle
+```

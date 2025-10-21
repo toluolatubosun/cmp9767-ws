@@ -3,7 +3,7 @@ import rclpy
 from rclpy.node import Node
 from tf2_ros import Buffer, TransformListener
 
-class TransformListener(Node):
+class CustomTransformListener(Node):
     def __init__(self):
         super().__init__('transform_listener')
         self.tf_buffer = Buffer()
@@ -39,7 +39,7 @@ class TransformListener(Node):
 
 def main():
     rclpy.init()
-    node = TransformListener()
+    node = CustomTransformListener()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
