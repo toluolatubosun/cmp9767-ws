@@ -25,7 +25,9 @@
 				"JaehyunShim.vscode-ros2",
 				"nonanonno.vscode-ros2",
 				"deitry.colcon-helper",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"tomoki1207.pdf",
+				"GitHub.copilot-chat"
 			]
 		}
 	},

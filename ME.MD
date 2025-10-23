@@ -2,7 +2,10 @@
 zenoh-bridge-ros2dds -e tcp/10.82.0.97:7447
 
 # CONNECT TO SIMULATION
+## Default environment
 ros2 launch limo_gazebosim limo_gazebo_diff.launch.py
+## Custom environment
+ros2 launch limo_gazebosim limo_gazebo_diff.launch.py world:=/workspaces/cmp9767-ws/src/worlds/basic_environment.world
 
 # Inspect sensors
 rviz2 -d /opt/ros/lcas/install/limo_gazebosim/share/limo_gazebosim/rviz/urdf.rviz
@@ -56,3 +59,5 @@ sudo apt-get install ros-humble-image-view
 
 # Image stream coming from the robot
 ros2 run image_view image_view --ros-args -r image:=/limo/depth_camera_link/image_raw
+
+
