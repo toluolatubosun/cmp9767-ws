@@ -9,6 +9,7 @@ ros2 launch limo_gazebosim limo_gazebo_diff.launch.py world:=/workspaces/cmp9767
 
 # Inspect sensors
 rviz2 -d /opt/ros/lcas/install/limo_gazebosim/share/limo_gazebosim/rviz/urdf.rviz
+rviz2 -d /opt/ros/lcas/install/limo_gazebosim/share/limo_gazebosim/rviz/urdf.rviz world:=/workspaces/cmp9767-ws/src/worlds/basic_environment.world
 
 # Movement
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
@@ -31,6 +32,8 @@ ros2 run tf2_ros tf2_echo odom depth_camera_link
 
 # Get the frame the laser scanner is in
 ros2 topic echo /scan
+
+# -------------------------------------
 
 # ROS2 Package
 For `my_robot_package` you can use any name
@@ -59,5 +62,31 @@ sudo apt-get install ros-humble-image-view
 
 # Image stream coming from the robot
 ros2 run image_view image_view --ros-args -r image:=/limo/depth_camera_link/image_raw
+OR 
+ros2 run rqt_image_view rqt_image_view (Then you select the topic)
 
+# ROS Bags
+## Record topic
+ros2 bag record -o <filename> <topic(s)>
+> ros2 bag record -o my_bag /cmd_vel /scan
+## Play ros bag
+ros2 bag play <filename>
+> ros2 bag play my_bag
 
+# Stream Video/Camera to pic
+## Install image publisher
+sudo apt-get install ros-humble-image-publisher
+## Stream to topic
+ros2 run image_publisher image_publisher_node test_video.mp4
+ros2 run image_publisher image_publisher_node /dev/video0 (device camere, name may differ)
+## Inspect image with RQT
+ros2 run rqt_image_view rqt_image_view
+
+# -------------------------------------
+
+# Install navigation package for autonomous movement
+sudo apt install ros-humble-nav2-*
+
+# Run autonomius movement
+ros2 launch limo_navigation limo_navigation.launch.py
+ros2 launch limo_navigation limo_navigation.launch.py world:=/workspaces/cmp9767-ws/src/worlds/basic_environment.world
