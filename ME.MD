@@ -13,6 +13,8 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 # Move in cricle
 ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.5}}"
 
+# -------------------------------------
+
 # Command to view frames (Generates PDF to view sensors)
 ros2 run tf2_tools view_frames
 
@@ -21,6 +23,7 @@ sudo apt update
 sudo apt install ros-humble-tf2-ros
 
 # View Transform Between Target and Source
+ros2 run tf2_ros tf2_echo <target> <source>
 ros2 run tf2_ros tf2_echo odom depth_camera_link
 
 # Get the frame the laser scanner is in
@@ -42,3 +45,14 @@ source install/setup.bash
 # Run the package
 ros2 run my_robot_package move_circle
 ```
+
+# -------------------------------------
+
+# Install RQT Image View
+## Inspect image topics
+sudo apt-get install ros-humble-rqt-image-view
+## Save image topics
+sudo apt-get install ros-humble-image-view
+
+# Image stream coming from the robot
+ros2 run image_view image_view --ros-args -r image:=/limo/depth_camera_link/image_raw
